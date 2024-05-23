@@ -61,6 +61,8 @@ public class LoginService {
     public static void verifyMensajeErrorFormatoIncorrecto() {
         waitVisibility(LoginConstants.MENSAJE_ERROR_FORMATO_INCORRECTO);
         Assert.assertFalse(getMensajeErrorFormatoIncorrecto().isEmpty());
+//        Una opcion mas robusta de la verificacion, seria que al conocer el mensaje, el mensaje sea el esperado, ejemplo:
+        Assert.assertEquals(getMensajeErrorFormatoIncorrecto(),"Email format is not valid");
     }
 
     public static void verifyBotonActivo() {
@@ -69,6 +71,7 @@ public class LoginService {
 
     public static void verifyMensajeError() {
         waitVisibility(LoginConstants.MENSAJE_ERROR);
+        // Misma observacion que verifyMensajeErrorFormatoIncorrecto()
         Assert.assertFalse(getMensajeError().isEmpty());
     }
 }

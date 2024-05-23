@@ -1,5 +1,6 @@
 Feature: As a potential client I want to create a new proyect
 
+  # Muy bien resuelto con el numero aleatorio!
   @Workspace @Successfull @Smoke
   Scenario: The client is in page tracker
     Given The client is on page tracker

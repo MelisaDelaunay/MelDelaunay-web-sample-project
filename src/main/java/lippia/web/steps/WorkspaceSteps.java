@@ -3,6 +3,7 @@ package lippia.web.steps;
 import com.crowdar.core.PageSteps;
 import com.crowdar.core.actions.WebActionManager;
 import io.cucumber.java.en.*;
+import io.lippia.api.lowcode.variables.VariablesManager;
 import lippia.web.constants.WorkspaceConstants;
 import lippia.web.services.LoginService;
 import lippia.web.services.WorkspaceService;
@@ -31,11 +32,21 @@ public class WorkspaceSteps extends PageSteps {
         WebActionManager.click(WorkspaceConstants.CREAR_NUEVO_WORKSPACE_BUTTON,true);
     }
     @When("The client set the name of workspace {string}")
-    public void theClientSetTheNameOfWorkspace(String Workspace) {
+    public void theClientSetTheNameOfWorkspace(String workspace) {
         WebActionManager.waitClickable(WorkspaceConstants.NOMBRE_WORKSPACE);
         Random random = new Random();
         int numeroAleatorio = random.nextInt(100);
-        WorkspaceService.setWorkspace(Workspace + numeroAleatorio);
+
+        // Este seria un ejemplo de uso de Variables
+        String nombreWorkspace = workspace + numeroAleatorio;
+
+        // Seteo una variable para que este disponible para su uso en otros steps / scenarios
+        VariablesManager.setVariable("nombreWorkspace",nombreWorkspace);
+
+        // Obtengo la variable seteada mas arriba y la muestro por consola
+        System.out.println("Nombre del workspace generado: " + VariablesManager.getVariable("nombreWorkspace"));
+
+        WorkspaceService.setWorkspace(nombreWorkspace);
     }
 
     @When("The client on log in button Crear")

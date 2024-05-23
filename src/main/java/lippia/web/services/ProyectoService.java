@@ -33,6 +33,7 @@ public class ProyectoService {
 
     public static void verifyMensajeExitoso() {
         waitVisibility(ProyectoConstants.MENSAJE_EXITOSO);
+        // Aca aplica misma observacion que otras verificaciones mediante texto
         Assert.assertFalse(getMensajeExitoso().isEmpty());
     }
 

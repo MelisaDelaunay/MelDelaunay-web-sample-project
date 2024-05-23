@@ -1,5 +1,8 @@
 Feature: As a potential client I want to create a new workspace
 
+#  Para este scenario nos estaria faltando un Then, para efectivamente realizar una verificacion, ejemplo:
+  #  Guardar de alguna manera el nombre aleatorio que se asigno al Workspace creado (investigar objeto VariablesManager)
+  #  Verificar que exista un workspace con el nombre aleatorio creado en la lista de Workspaces
   @WorkspaceCreacion @Successfull @Smoke
   Scenario: The client is in page tracker
     Given The client is on page tracker
