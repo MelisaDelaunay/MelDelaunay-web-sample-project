@@ -1,4 +1,4 @@
-Feature: As a potential client I want to Log out of clockify
+Feature: As a client I want to Log out of clockify
 
   @Logout @Successfull @Smoke
   Scenario: The client is in page tracker

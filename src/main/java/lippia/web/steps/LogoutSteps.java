@@ -25,10 +25,11 @@ public class LogoutSteps extends PageSteps {
     @Given("The client is on page tracker")
     public void theClientIsOnPageTracker() {
         HomeService.navegarWeb();
+        HomeService.clickAcceptCookies();
         HomeService.clickLogin();
         LoginService.clickLoginManually();
-        LoginService.setEmail("melisadelaunay97@gmail.com");
-        LoginService.setPassword("Pass1234");
+        LoginService.setEmail("rocio.b.alvarado@hotmail.com");
+        LoginService.setPassword("Rocio1234!");
         LoginService.clickLoginIngresa();
     }
 }

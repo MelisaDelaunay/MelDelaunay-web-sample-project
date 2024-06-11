@@ -1,4 +1,4 @@
-Feature: As a potential client I want to create a new proyect
+Feature: As a client I want to create a new proyect
 
   @Workspace @Successfull @Smoke
   Scenario: The client is in page tracker

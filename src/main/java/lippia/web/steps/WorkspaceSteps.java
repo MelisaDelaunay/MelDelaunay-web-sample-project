@@ -28,8 +28,9 @@ public class WorkspaceSteps extends PageSteps {
     @When("The client on log in button Crear workspace")
     public void theClientOnLogInButtonCrearWorkspace() {
         waitVisibility(WorkspaceConstants.CREAR_NUEVO_WORKSPACE_BUTTON);
-        WebActionManager.click(WorkspaceConstants.CREAR_NUEVO_WORKSPACE_BUTTON,true);
+        WebActionManager.click(WorkspaceConstants.CREAR_NUEVO_WORKSPACE_BUTTON);
     }
+
     @When("The client set the name of workspace {string}")
     public void theClientSetTheNameOfWorkspace(String Workspace) {
         WebActionManager.waitClickable(WorkspaceConstants.NOMBRE_WORKSPACE);

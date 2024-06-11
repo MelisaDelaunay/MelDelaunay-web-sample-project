@@ -1,9 +1,11 @@
-Feature: As a potential client I want to create a new workspace
+Feature: As a client I want to create a new workspace
+
+  Background:
+    Given The client is on page tracker
+    When The client on log in button menu workspace
 
   @WorkspaceCreacion @Successfull @Smoke
   Scenario: The client is in page tracker
-    Given The client is on page tracker
-    When The client on log in button menu workspace
     When The client on log in button Administrar workspace
     When The client on log in button Crear workspace
     When The client on log in div
@@ -12,8 +14,6 @@ Feature: As a potential client I want to create a new workspace
 
   @WorkspaceModificacion @Successfull @Smoke
   Scenario: The client is in page tracker
-    Given The client is on page tracker
-    When The client on log in button menu workspace
     When The client on log in button Settings workspace
     When The client set the workspace name "1234" in the modification.
     When The client on log in button upgrade

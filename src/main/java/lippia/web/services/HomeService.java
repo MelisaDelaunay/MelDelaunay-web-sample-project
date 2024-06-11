@@ -15,6 +15,9 @@ public class HomeService extends ActionManager {
 
      public static void clickLogin() {
         WebActionManager.click(HomeConstants.LOGIN_BUTTON);
-        //WebElement element = getElement(GoogleConstants.LOGIN_BUTTON);
+    }
+
+    public static void clickAcceptCookies() {
+        WebActionManager.click(HomeConstants.ACCEPT_COOKIES_BUTTON);
     }
 }
