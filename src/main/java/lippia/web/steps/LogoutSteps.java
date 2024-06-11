@@ -28,8 +28,8 @@ public class LogoutSteps extends PageSteps {
         HomeService.clickAcceptCookies();
         HomeService.clickLogin();
         LoginService.clickLoginManually();
-        LoginService.setEmail("rocio.b.alvarado@hotmail.com");
-        LoginService.setPassword("Rocio1234!");
+        LoginService.setEmail("melisadelaunay97@gmail.com");
+        LoginService.setPassword("Pass1234");
         LoginService.clickLoginIngresa();
     }
 }

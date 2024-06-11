@@ -14,7 +14,7 @@ Feature: As a potential client I want to login in clockify
 
     Examples:
       | email                          | password     |
-      | "rocio.b.alvarado@hotmail.com" | "Rocio1234!" |
+      | "melisadelaunay97@gmail.com" | "Pass1234" |
 
 
   @LoginFallido @Smoke
@@ -25,24 +25,24 @@ Feature: As a potential client I want to login in clockify
 
     Examples:
       | email                          | password     |
-      | "usuario3@@example.com" | "Rocio1234!" |
-      | "usuario4example.com"  | "Rocio1234!"     |
+      | "usuariooo@@example.com" | "Pass1234" |
+      | "usuarionoexisteexample.com"  | "Pass1234"     |
 
 
   Scenario: The client login in clockify fail password bad
-    When the client set the mail "rociobalvarado@hotmail.com"
-    When The client set the password "rocio.b.alvarado@hotmail.com"
+    When the client set the mail "melisadelaunay97@gmail.com"
+    When The client set the password "melisadelaunay97@gmail.com"
     When The client verify is on dashboard
     Then  The client sees an error message
 
 
   Scenario: The client login in clockify with a non-existent user
-    When the client set the mail "rociobalvarado@hotmail.com"
-    When The client set the password "rocio1234!"
+    When the client set the mail "melisadelaunay@gmail.com"
+    When The client set the password "Pass1234"
     Then  The client sees an error message
 
 
   Scenario: The client login in clockify with a non-existent user
-    When the client set the mail "rociobalvarado@hotmail.com"
+    When the client set the mail "melisadelaunay@gmail.com"
     Then  The client does not see the active button
 

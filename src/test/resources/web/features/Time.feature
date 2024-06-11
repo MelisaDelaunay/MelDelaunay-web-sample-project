@@ -1,4 +1,4 @@
-@AllTestTime
+@AllTests
 Feature: As a client I want modified times
   Background:
     Given The client is on page tracker
@@ -15,7 +15,7 @@ Feature: As a client I want modified times
 
     Examples:
       | startTime | endTime |  fecha |
-      | "12:00" | "12:30" | "07/06/2023"  |
+      | "14:00" | "14:15" | "06/06/2024"  |
 
   @CancelacionTime @Successfull @Smoke
   Scenario: The client is in page tracker
@@ -35,7 +35,7 @@ Feature: As a client I want modified times
 
     Examples:
       | nombreTime      |
-      | "Modificacion1" |
-      | "Modificacion2" |
+      | "ModificacionNombre1" |
+      | "ModificacionNombre2" |
 
 

@@ -5,6 +5,6 @@ Feature: As a client I want to create a new proyect
     Given The client is on page tracker
     When The client on log in button menu proyecto
     When The client on log in button Crear proyecto
-    When The client set the name of proyecto "Proyecto"
+    When The client set the name of proyecto "ProyectoMel"
     When The client on log in button Create
     Then The client sees a successful message
